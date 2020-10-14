@@ -1,0 +1,11 @@
+{
+  "name": "@admin-console/design.elements",
+  "version": "1.0.0",
+  "description": "my elements",
+  "files": ["elements.js", "styles.css"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
