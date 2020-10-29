@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { Injector, NgModule } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
-import { ComponentsModule, ComponentsComponent } from 'components';
+import { ComponentsModule, ComponentsComponent,WeatherComponent } from 'components';
 
 
 @NgModule({
@@ -18,5 +18,7 @@ export class AppModule {
   ngDoBootstrap(){
     const element = createCustomElement(ComponentsComponent, { injector: this.injector })
     customElements.define("lib-components", element);
+    const element2 = createCustomElement(WeatherComponent, { injector: this.injector })
+    customElements.define("app-weather", element2);
   }
 }
