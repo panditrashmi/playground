@@ -1,0 +1,39 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<!-- Toolbar -->
+
+
+<div class="content" role="main">
+
+  
+  <h2>Resources</h2>
+  <p>Here are date picker accessible:</p>
+
+  <label for="date">Select Date</label>
+  <input type="text" id="calender" />
+
+    <div class="input-group" daterangepicker [options]="picker1" (selected)="selectedDate($event, chosenDate)"
+      (applyDaterangepicker)="applyDatepicker($event)" (showDaterangepicker)="calendarEventsHandler($event)">
+      <span class="form-control uneditable-input" name="daterange">
+        {{ chosenDate.start | date:'mediumDate' }} - {{ chosenDate.end| date:'mediumDate' }}
+      </span>
+      <span class="input-group-btn">
+        <a type="button" class="btn btn-default"><i class="glyphicon glyphicon-calendar"></i></a>
+      </span>
+    </div>
+
+  
+</div>
+
+
+
+
+<router-outlet></router-outlet>
