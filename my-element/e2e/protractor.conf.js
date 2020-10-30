@@ -3,7 +3,8 @@
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 
 const { SpecReporter, StacktraceOption } = require('jasmine-spec-reporter');
-
+var HtmlReporter = require('protractor-beautiful-reporter');
+var path = require('path');
 /**
  * @type { import("protractor").Config }
  */
@@ -41,5 +42,15 @@ exports.config = {
         displayStacktrace: StacktraceOption.PRETTY
       }
     }));
+
+    // Add a screenshot reporter:
+    jasmine.getEnv().addReporter(new HtmlReporter({
+      takeScreenShotsOnlyForFailedSpecs: false,
+      screenshotsSubfolder: 'images',
+      jsonsSubfolder: 'jsons',
+      baseDirectory: 'reports'
+  }).getJasmine2Reporter());
   }
+  
+  
 };

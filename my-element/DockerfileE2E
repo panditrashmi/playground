@@ -74,3 +74,5 @@ RUN ng build --output-path=dist
 #This command will build our angular project in production mode and create production ready files
 # in dist/ folder.
 RUN npm run build --prod
+
+CMD ng serve --host 0.0.0.0
